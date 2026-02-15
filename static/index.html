@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crawler Test Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h1 { color: #333; }
+        h2 { color: #666; margin-top: 20px; }
+        a { color: #0066cc; margin: 5px 0; display: block; }
+        .metadata { background-color: #f9f9f9; padding: 10px; margin: 10px 0; border-left: 4px solid #0066cc; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Crawler Test Page</h1>
+        <p>This is a test page for the Crawler project. It contains various content types for testing.</p>
+
+        <h2>Internal Links</h2>
+        <a href="http://nginx/page1.html">Test Page 1</a>
+        <a href="http://nginx/page2.html">Test Page 2</a>
+        <a href="http://nginx/nested/page3.html">Nested Test Page</a>
+
+        <h2>External Links</h2>
+        <a href="https://www.example.com">External Example Link</a>
+        <a href="https://www.github.com">GitHub</a>
+
+        <h2>Content Sections</h2>
+        <p>This page contains multiple paragraphs for testing content extraction. The crawler should be able to identify and parse all text content on this page.</p>
+        
+        <div class="metadata">
+            <strong>Page Metadata:</strong>
+            <p>Created: 2026-02-07</p>
+            <p>Purpose: Local crawler testing</p>
+        </div>
+
+        <h2>Additional Resources</h2>
+        <ul>
+            <li><a href="http://nginx/resource1.html">Resource 1</a></li>
+            <li><a href="http://nginx/resource2.html">Resource 2</a></li>
+            <li><a href="http://nginx/resource3.html">Resource 3</a></li>
+        </ul>
+
+        <footer>
+            <p>&copy; 2026 Crawler Test. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

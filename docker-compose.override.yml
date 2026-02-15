@@ -1,0 +1,25 @@
+services:
+  CrawlerTakeHomeTask:
+    environment:
+      - DOTNET_ENVIRONMENT=Production
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/home/app/.microsoft/usersecrets:ro
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+    depends_on:
+      - rabbitmq
+      - redis
+    deploy:
+      mode: replicated
+      replicas: 2
+  nginx:
+    image: 'nginx:latest'
+    volumes:
+      - './static:/usr/share/nginx/html/'
+    ports: [8080:80]
+  rabbitmq:
+    image: rabbitmq:latest
+    ports: [5672:5672, 15672:15672]
+  redis:
+    image: redis:latest
+    ports: [6379:6379]
+    command: redis-server --save "" --appendonly no

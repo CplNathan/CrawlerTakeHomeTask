@@ -1,0 +1,19 @@
+services:
+  CrawlerTakeHomeTask:
+    image: ${DOCKER_REGISTRY-}CrawlerTakeHomeTask
+    build:
+      context: CrawlerTakeHomeTask
+      dockerfile: Dockerfile
+    depends_on:
+      - rabbitmq
+      - redis
+    deploy:
+      mode: replicated
+      replicas: 2
+  rabbitmq:
+    image: rabbitmq:latest
+    ports: [5672:5672, 15672:15672]
+  redis:
+    image: redis:latest
+    ports: [6379:6379]
+    command: redis-server --save "" --appendonly no --maxmemory 256mb --maxmemory-policy allkeys-lru

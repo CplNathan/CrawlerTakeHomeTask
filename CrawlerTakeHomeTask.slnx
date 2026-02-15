@@ -1,0 +1,9 @@
+<Solution>
+  <Project Path="docker-compose.dcproj">
+    <Build />
+  </Project>
+  <Project Path="CrawlerTakeHomeTask.UnitTests/CrawlerTakeHomeTask.UnitTests.csproj">
+    <Build Project="false" />
+  </Project>
+  <Project Path="CrawlerTakeHomeTask/CrawlerTakeHomeTask.csproj" />
+</Solution>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Page 1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h1 { color: #333; }
+        h2 { color: #666; margin-top: 20px; }
+        a { color: #0066cc; margin: 5px 0; display: block; }
+        .breadcrumb { margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #ddd; }
+        .info-box { background-color: #e8f4f8; padding: 15px; margin: 10px 0; border-left: 4px solid #0066cc; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="http://nginx/index.html">← Back to Home</a>
+        </div>
+
+        <h1>Test Page 1</h1>
+        <p>Welcome to Page 1. This is the first test page for the crawler project.</p>
+
+        <div class="info-box">
+            <h3>Page Information</h3>
+            <p><strong>Page ID:</strong> page1</p>
+            <p><strong>Description:</strong> First test page with various content types</p>
+            <p><strong>Last Updated:</strong> 2026-02-07</p>
+        </div>
+
+        <h2>Navigation Links</h2>
+        <a href="http://nginx/index.html">Home</a>
+        <a href="http://nginx/page2.html">Go to Page 2</a>
+        <a href="http://nginx/nested/page3.html">Go to Page 3 (Nested)</a>
+
+        <h2>Content Section 1</h2>
+        <p>This section contains detailed information about the first test page. The crawler should be able to extract all of this text content efficiently.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+        <h2>Content Section 2</h2>
+        <p>Additional content for testing. This page demonstrates various HTML elements that a web crawler should handle properly.</p>
+        
+        <h3>Subsection</h3>
+        <ul>
+            <li>List item 1</li>
+            <li>List item 2</li>
+            <li>List item 3</li>
+        </ul>
+
+        <h2>External Resources</h2>
+        <a href="https://www.wikipedia.org">Wikipedia</a>
+        <a href="https://www.google.com">Google</a>
+
+        <footer style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd; color: #666;">
+            <p>Page 1 | Crawler Test Suite</p>
+        </footer>
+    </div>
+</body>
+</html>
